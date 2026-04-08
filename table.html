@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel HTML</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        .scratch {
+            background-image: repeating-linear-gradient(
+                135deg,
+                transparent,
+                transparent 2px,
+                rgba(255,255,255,0.015) 2px,
+                rgba(255,255,255,0.015) 4px
+            );
+        }
+        .etched {
+            text-shadow: 0 1px 0 #000, 0 -1px 0 #3f0000;
+        }
+    </style>
+</head>
+<body class="bg-stone-950 min-h-screen p-8 font-mono scratch">
+
+    <div class="max-w-2xl mx-auto">
+        <h1 class="text-3xl font-bold text-red-400 mb-6 etched tracking-widest uppercase">// Tabel</h1>
+
+        <div class="relative border border-red-900 shadow-[0_0_30px_rgba(127,29,29,0.35)] overflow-hidden">
+
+            <!-- corner accents -->
+            <span class="absolute top-0 left-0 w-5 h-5 border-t-2 border-l-2 border-red-600 z-10"></span>
+            <span class="absolute top-0 right-0 w-5 h-5 border-t-2 border-r-2 border-red-600 z-10"></span>
+            <span class="absolute bottom-0 left-0 w-5 h-5 border-b-2 border-l-2 border-red-600 z-10"></span>
+            <span class="absolute bottom-0 right-0 w-5 h-5 border-b-2 border-r-2 border-red-600 z-10"></span>
+
+            <table class="w-full text-left">
+                <thead class="bg-red-950 border-b border-red-800">
+                    <tr>
+                        <th class="px-6 py-3 text-red-400 font-bold tracking-widest text-xs uppercase etched">No.</th>
+                        <th class="px-6 py-3 text-red-400 font-bold tracking-widest text-xs uppercase etched">Nama</th>
+                        <th class="px-6 py-3 text-red-400 font-bold tracking-widest text-xs uppercase etched">Lokasi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-stone-900 border-b border-red-950 hover:bg-red-950 transition-colors">
+                        <td class="px-6 py-3 text-stone-300 text-sm">01</td>
+                        <td class="px-6 py-3 text-stone-300 text-sm">Fitra</td>
+                        <td class="px-6 py-3 text-stone-300 text-sm">Indonesia</td>
+                    </tr>
+                    <tr class="bg-stone-950 hover:bg-red-950 transition-colors">
+                        <td class="px-6 py-3 text-stone-300 text-sm">02</td>
+                        <td class="px-6 py-3 text-stone-300 text-sm">Rani</td>
+                        <td class="px-6 py-3 text-stone-300 text-sm">Indonesia</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

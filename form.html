@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form HTML</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        .scratch {
+            background-image: repeating-linear-gradient(
+                135deg,
+                transparent,
+                transparent 2px,
+                rgba(255,255,255,0.015) 2px,
+                rgba(255,255,255,0.015) 4px
+            );
+        }
+        .etched {
+            text-shadow: 0 1px 0 #000, 0 -1px 0 #3f0000;
+        }
+        input, textarea, select {
+            color-scheme: dark;
+        }
+    </style>
+</head>
+<body class="bg-stone-950 min-h-screen p-8 font-mono scratch">
+
+    <div class="max-w-lg mx-auto bg-stone-900 border border-red-900 shadow-[0_0_40px_rgba(127,29,29,0.35)] p-8 relative">
+
+        <!-- corner accents -->
+        <span class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-red-700"></span>
+        <span class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-red-700"></span>
+        <span class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-red-700"></span>
+        <span class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-red-700"></span>
+
+        <h1 class="text-2xl font-bold text-red-400 mb-6 etched tracking-widest uppercase">// Form</h1>
+
+        <form method="post" class="space-y-5">
+            <div>
+                <label class="block text-xs font-bold text-red-500 mb-1 tracking-widest uppercase">Nama:</label>
+                <input type="text"
+                    class="w-full bg-stone-950 border border-red-900 text-stone-200 px-4 py-2 text-sm focus:outline-none focus:border-red-600 focus:shadow-[0_0_8px_rgba(127,29,29,0.6)] transition-all placeholder-stone-600">
+            </div>
+
+            <div class="flex items-center gap-6">
+                <label class="flex items-center gap-2 text-stone-400 text-sm cursor-pointer hover:text-red-400 transition-colors">
+                    <input type="checkbox" class="accent-red-700 w-4 h-4"> Checkbox
+                </label>
+                <label class="flex items-center gap-2 text-stone-400 text-sm cursor-pointer hover:text-red-400 transition-colors">
+                    <input type="radio" class="accent-red-700 w-4 h-4"> Radio
+                </label>
+            </div>
+
+            <div>
+                <label class="block text-xs font-bold text-red-500 mb-1 tracking-widest uppercase">Pesan:</label>
+                <textarea rows="5"
+                    class="w-full bg-stone-950 border border-red-900 text-stone-200 px-4 py-2 text-sm focus:outline-none focus:border-red-600 focus:shadow-[0_0_8px_rgba(127,29,29,0.6)] transition-all resize-none">Ketik Text Area Message di sini</textarea>
+            </div>
+
+            <fieldset class="border border-red-900 p-4 relative">
+                <legend class="text-red-500 font-bold text-xs tracking-widest uppercase px-2">&#x25A0; Terkait scuy</legend>
+
+                <label class="block text-xs font-bold text-red-500 mb-2 tracking-widest uppercase">Apa Warna Favorit kak acuy?</label>
+                <select class="w-full bg-stone-950 border border-red-900 text-stone-200 px-4 py-2 text-sm focus:outline-none focus:border-red-600 transition-all">
+                    <option>Merah</option>
+                    <option>Kuning</option>
+                    <option>Biru</option>
+                </select>
+            </fieldset>
+
+            <button type="submit"
+                class="w-full bg-red-950 border border-red-700 text-red-300 font-bold py-2 tracking-widest uppercase text-sm hover:bg-red-900 hover:text-red-100 transition-all shadow-[0_0_12px_rgba(127,29,29,0.4)] etched">
+                &#x25B6; Simpan
+            </button>
+        </form>
+    </div>
+
+</body>
+</html>

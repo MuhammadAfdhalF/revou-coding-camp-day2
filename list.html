@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List HTML</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        .scratch {
+            background-image: repeating-linear-gradient(
+                135deg,
+                transparent,
+                transparent 2px,
+                rgba(255,255,255,0.015) 2px,
+                rgba(255,255,255,0.015) 4px
+            );
+        }
+        .etched {
+            text-shadow: 0 1px 0 #000, 0 -1px 0 #3f0000;
+        }
+    </style>
+</head>
+<body class="bg-stone-950 min-h-screen p-8 font-mono scratch">
+
+    <div class="max-w-md mx-auto space-y-6">
+
+        <!-- Unordered List -->
+        <div class="bg-stone-900 border border-red-900 shadow-[0_0_30px_rgba(127,29,29,0.3)] p-6 relative">
+            <span class="absolute top-0 left-0 w-5 h-5 border-t-2 border-l-2 border-red-700"></span>
+            <span class="absolute top-0 right-0 w-5 h-5 border-t-2 border-r-2 border-red-700"></span>
+            <span class="absolute bottom-0 left-0 w-5 h-5 border-b-2 border-l-2 border-red-700"></span>
+            <span class="absolute bottom-0 right-0 w-5 h-5 border-b-2 border-r-2 border-red-700"></span>
+
+            <h2 class="text-sm font-bold text-red-400 mb-4 etched tracking-widest uppercase">&#x25A0; Unordered List (ul)</h2>
+            <ul class="space-y-3">
+                <li class="flex items-center gap-3 text-stone-300 text-sm hover:text-red-300 transition-colors group">
+                    <span class="w-2 h-2 bg-red-700 rotate-45 inline-block group-hover:bg-red-500 transition-colors flex-shrink-0"></span>
+                    Mangga
+                </li>
+                <li class="flex items-center gap-3 text-stone-300 text-sm hover:text-red-300 transition-colors group">
+                    <span class="w-2 h-2 bg-red-700 rotate-45 inline-block group-hover:bg-red-500 transition-colors flex-shrink-0"></span>
+                    Pisang
+                </li>
+                <li class="flex items-center gap-3 text-stone-300 text-sm hover:text-red-300 transition-colors group">
+                    <span class="w-2 h-2 bg-red-700 rotate-45 inline-block group-hover:bg-red-500 transition-colors flex-shrink-0"></span>
+                    Jambu
+                </li>
+            </ul>
+        </div>
+
+        <div class="border-t border-red-950 relative">
+            <span class="absolute left-1/2 -translate-x-1/2 -top-2 bg-stone-950 px-3 text-red-800 text-xs tracking-widest">&#x2014;&#x2014;</span>
+        </div>
+
+        <!-- Ordered List -->
+        <div class="bg-stone-900 border border-red-900 shadow-[0_0_30px_rgba(127,29,29,0.3)] p-6 relative">
+            <span class="absolute top-0 left-0 w-5 h-5 border-t-2 border-l-2 border-red-700"></span>
+            <span class="absolute top-0 right-0 w-5 h-5 border-t-2 border-r-2 border-red-700"></span>
+            <span class="absolute bottom-0 left-0 w-5 h-5 border-b-2 border-l-2 border-red-700"></span>
+            <span class="absolute bottom-0 right-0 w-5 h-5 border-b-2 border-r-2 border-red-700"></span>
+
+            <h2 class="text-sm font-bold text-red-400 mb-4 etched tracking-widest uppercase">&#x25A0; Ordered List (ol)</h2>
+            <ol class="space-y-3">
+                <li class="flex items-start gap-3 text-stone-300 text-sm hover:text-red-300 transition-colors group">
+                    <span class="flex-shrink-0 w-6 h-6 border border-red-800 bg-red-950 text-red-400 text-xs flex items-center justify-center font-bold group-hover:border-red-600 group-hover:text-red-300 transition-colors">1</span>
+                    Buka Github.com
+                </li>
+                <li class="flex items-start gap-3 text-stone-300 text-sm hover:text-red-300 transition-colors group">
+                    <span class="flex-shrink-0 w-6 h-6 border border-red-800 bg-red-950 text-red-400 text-xs flex items-center justify-center font-bold group-hover:border-red-600 group-hover:text-red-300 transition-colors">2</span>
+                    Klik tombol plus di kanan atas
+                </li>
+                <li class="flex items-start gap-3 text-stone-300 text-sm hover:text-red-300 transition-colors group">
+                    <span class="flex-shrink-0 w-6 h-6 border border-red-800 bg-red-950 text-red-400 text-xs flex items-center justify-center font-bold group-hover:border-red-600 group-hover:text-red-300 transition-colors">3</span>
+                    Pilih New Repository
+                </li>
+                <li class="flex items-start gap-3 text-stone-300 text-sm hover:text-red-300 transition-colors group">
+                    <span class="flex-shrink-0 w-6 h-6 border border-red-800 bg-red-950 text-red-400 text-xs flex items-center justify-center font-bold group-hover:border-red-600 group-hover:text-red-300 transition-colors">4</span>
+                    Isi nama repository
+                </li>
+                <li class="flex items-start gap-3 text-stone-300 text-sm hover:text-red-300 transition-colors group">
+                    <span class="flex-shrink-0 w-6 h-6 border border-red-800 bg-red-950 text-red-400 text-xs flex items-center justify-center font-bold group-hover:border-red-600 group-hover:text-red-300 transition-colors">5</span>
+                    Hidupkan Add Readme
+                </li>
+                <li class="flex items-start gap-3 text-stone-300 text-sm hover:text-red-300 transition-colors group">
+                    <span class="flex-shrink-0 w-6 h-6 border border-red-800 bg-red-950 text-red-400 text-xs flex items-center justify-center font-bold group-hover:border-red-600 group-hover:text-red-300 transition-colors">6</span>
+                    Klik Create Repository
+                </li>
+            </ol>
+        </div>
+
+    </div>
+
+</body>
+</html>

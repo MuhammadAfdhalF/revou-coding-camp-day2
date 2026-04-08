@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh HTML Sederhana</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-blood: #7f1d1d;
+            --color-ember: #991b1b;
+            --color-ash: #1c1917;
+            --color-coal: #0c0a09;
+        }
+
+        .etched {
+            text-shadow: 0 1px 0 #000, 0 -1px 0 #3f0000;
+        }
+
+        .scratch {
+            background-image: repeating-linear-gradient(
+                135deg,
+                transparent,
+                transparent 2px,
+                rgba(255,255,255,0.015) 2px,
+                rgba(255,255,255,0.015) 4px
+            );
+        }
+    </style>
+</head>
+<body class="bg-stone-950 min-h-screen p-8 font-mono text-red-100 scratch">
+
+    <div class="max-w-2xl mx-auto bg-stone-900 rounded-none border border-red-900 shadow-[0_0_40px_rgba(127,29,29,0.4)] p-8 relative overflow-hidden">
+
+        <!-- corner accents -->
+        <span class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-red-700"></span>
+        <span class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-red-700"></span>
+        <span class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-red-700"></span>
+        <span class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-red-700"></span>
+
+        <h1 class="text-4xl font-bold text-red-400 mb-2 etched tracking-widest uppercase">Biasanya bikin judul Bab 1</h1>
+        <h2 class="text-3xl font-semibold text-red-500 mb-2 etched tracking-wide">Bab 1.1</h2>
+        <h3 class="text-2xl font-semibold text-red-600 mb-2 tracking-wide">Bab 1.1.1</h3>
+        <h4 class="text-xl font-medium text-red-700 mb-2">Bab 1.1.1.1</h4>
+        <h5 class="text-lg font-medium text-red-800 mb-2">Bab 1.1.1.1.1</h5>
+        <h6 class="text-base font-medium text-red-900 mb-4">Bab 1.1.1.1.1.1</h6>
+
+        <hr class="border-red-900 my-4">
+
+        <p class="text-stone-300 leading-relaxed text-sm">
+            Misalkan aku punya paragraf. Aku mau paragrafnya di
+            <b class="font-bold text-red-400 etched">bold</b>.
+            Lalu aku mau juga dia
+            <i class="italic text-red-300">italic atau miring</i>.
+            Aku maunya dia <sub class="text-red-500">turun bawah</sub>.
+            Ada juga yang <sup class="text-red-500">naik ke atas</sup>.
+            Contoh: Misal 2<sup class="text-red-400 font-bold">2</sup>
+        </p>
+    </div>
+
+</body>
+</html>

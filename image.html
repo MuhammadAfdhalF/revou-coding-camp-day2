@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        .scratch {
+            background-image: repeating-linear-gradient(
+                135deg,
+                transparent,
+                transparent 2px,
+                rgba(255,255,255,0.015) 2px,
+                rgba(255,255,255,0.015) 4px
+            );
+        }
+        .etched {
+            text-shadow: 0 1px 0 #000, 0 -1px 0 #3f0000;
+        }
+        .glow-red {
+            box-shadow: 0 0 0 2px #7f1d1d, 0 0 20px rgba(127,29,29,0.6), 0 0 40px rgba(127,29,29,0.2);
+        }
+    </style>
+</head>
+<body class="bg-stone-950 min-h-screen p-8 font-mono scratch">
+
+    <div class="max-w-md mx-auto text-center">
+        <h1 class="text-3xl font-bold text-red-400 mb-8 etched tracking-widest uppercase">// Image</h1>
+
+        <div class="inline-block relative mb-8">
+            <!-- outer glow frame -->
+            <div class="glow-red p-1 bg-stone-900">
+                <img src="./img/fikri.jpeg" alt="Robot AI terbang pakai roket" width="200" class="block grayscale contrast-125 brightness-75">
+            </div>
+            <!-- scan line overlay -->
+            <div class="absolute inset-0 pointer-events-none"
+                 style="background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,0.15) 3px, rgba(0,0,0,0.15) 4px);">
+            </div>
+        </div>
+
+        <hr class="border-red-900 my-6">
+
+        <a href="https://google.com" target="_blank"
+           class="inline-block border border-red-700 text-red-400 font-bold px-8 py-2 tracking-widest uppercase text-sm hover:bg-red-900 hover:text-red-200 transition-all shadow-[0_0_12px_rgba(127,29,29,0.5)] etched">
+            &#x25B6; Ini Link Ke Google
+        </a>
+    </div>
+
+</body>
+</html>
